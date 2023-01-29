@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class'
 
 
 const TaskComponent = ({Task}) => {
+
+    useEffect(() => {
+        console.log('created task')
+        return () => {
+            console.log(`Task: ${Task.name} is going to `)
+        };
+    }, [Task]);
+
+
     return (
         <div>
             <h2>
