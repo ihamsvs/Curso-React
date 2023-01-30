@@ -9,6 +9,8 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
+import Clock from './components/Ejercicios/Clock';
+
 
 
 function App() {
@@ -37,7 +39,7 @@ function App() {
             Contenido del props.children
           </h3>
         </Ejemplo4> */}
-        <GreetingStyled name="Iham"></GreetingStyled>
+        <Clock></Clock>
           
         
 
