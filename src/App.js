@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         
         {/*Componente propio Greeting.jsx -> Asi se comenta en React*/}
 
@@ -27,7 +27,7 @@ function App() {
         {/*<GreetingF name = "Iham"></GreetingF> */}
 
         {/* Componente de listado de tarea */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent> 
         {/* <ComponenteA></ComponenteA> */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
@@ -39,7 +39,7 @@ function App() {
             Contenido del props.children
           </h3>
         </Ejemplo4> */}
-        <Clock></Clock>
+        
           
         
 
