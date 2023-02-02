@@ -10,6 +10,7 @@ import MiComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Clock from './components/Ejercicios/Clock';
+import Father from './components/container/father';
 
 
 
@@ -27,7 +28,8 @@ function App() {
         {/*<GreetingF name = "Iham"></GreetingF> */}
 
         {/* Componente de listado de tarea */}
-        <TaskListComponent></TaskListComponent> 
+        {/* <TaskListComponent></TaskListComponent> */}
+         
         {/* <ComponenteA></ComponenteA> */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
@@ -39,6 +41,9 @@ function App() {
             Contenido del props.children
           </h3>
         </Ejemplo4> */}
+
+        {/* Gestión de eventos */}
+        <Father></Father>
         
           
         
