@@ -3,13 +3,14 @@
 }
 
 
-h1{
-    color: cyan;
+.task-action{
+    cursor: pointer;
 }
 
-
-.task-name {
-    font-weight: bold;
-    color: cadetblue;
+label{
+    color: whitesmoke;
 }
 
+div .letter-black{
+    color: black;
+}

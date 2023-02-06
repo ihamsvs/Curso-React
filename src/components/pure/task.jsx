@@ -9,7 +9,7 @@ import '../../styles/task.scss'
 import { LEVELS } from '../../models/levels.enum';
 
 
-const TaskComponent = ({Task}) => {
+const TaskComponent = ({Task, complete, remove}) => {
 
     useEffect(() => {
         console.log('created task')
@@ -43,15 +43,15 @@ const TaskComponent = ({Task}) => {
         }
     }
     /**
-     * 
+     * Se vuelve una funcion anonima para que funcione cuando le demos click y no antes
      * @returns Function that returns of depending 
      */
 
     function taskIconCompleted(){
         if(Task.completed){
-            return(<i className='bi bi-check2-circle' style={{color: 'green', fontWeight:'bold'}}></i>)    
+            return(<i onClick={()=>complete(Task)} className='bi bi-check2-circle task-action' style={{color: 'green', fontWeight:'bold'}}></i>)    
         }else{
-            return(<i className='bi bi-emoji-angry-fill' style={{color: 'red', fontWeight:'bold'}}></i>)
+            return(<i onClick={()=>complete(Task)} className='bi bi-emoji-angry-fill task-action' style={{color: 'red', fontWeight:'bold'}}></i>)
         }
     }
 
@@ -71,7 +71,7 @@ const TaskComponent = ({Task}) => {
             <td className='align-middle'>
                 {/* TODO SUSTITUIR POR ICONOS */}
                 {taskIconCompleted()}
-                <i className='bi bi-trash-fill' style={{color: 'tomato',}}></i>
+                <i className='bi bi-trash-fill task-action' style={{color: 'tomato',}} onClick={()=> remove(Task)}></i>
             </td>
 
         </tr>
@@ -84,7 +84,9 @@ const TaskComponent = ({Task}) => {
 
 
 TaskComponent.propTypes = {
-    task: PropTypes.instanceOf(Task) //Con esto decimos que es una clase
+    task: PropTypes.instanceOf(Task).isRequired, //Con esto decimos que es una clase
+    complete: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired
 };
 
 

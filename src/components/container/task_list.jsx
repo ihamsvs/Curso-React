@@ -34,10 +34,33 @@ const TaskListComponent = () => {
     }, [tasks]);
 
     
+    function completeTask(Task){
+        console.log('Complete this Task: ', Task)
+        const index = tasks.indexOf(Task)
+        const tempTasks = [...tasks]
+        tempTasks[index].completed = ! tempTasks[index].completed
 
+        //We update the state of the componenet and it will update the Iteration fo the tasks in order to show the 
+        //Task updated
+        setTasks(tempTasks)
+
+    }
+
+    function deleteTask(Task){
+        console.log('Delete this Task: ', Task)
+        const index = tasks.indexOf(Task)
+        const tempTasks = [...tasks]
+        tempTasks.splice(index,1);
+        setTasks(tempTasks)
+    }
     
-    const changeCompleted = (id) => {
-        
+
+    function addTask(Task){
+        console.log('Delete this Task: ', Task)
+        const index = tasks.indexOf(Task)
+        const tempTasks = [...tasks]
+        tempTasks.push(tasks)
+        setTasks(tempTasks)
     }
 
     return (
@@ -49,7 +72,7 @@ const TaskListComponent = () => {
                         <h5>Your Task:</h5>
                     </div>
                     {/*Card body (content) */}
-                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px'}}>
+                    <div className='card-body ' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height: '400px'}}>
                         <table>
                             <thead>
                                 <tr>
@@ -61,9 +84,9 @@ const TaskListComponent = () => {
                             </thead>
                             <tbody>
                                 
-                                {tasks.map((task, index)=>{
+                                {tasks.map((tasks, index)=>{
                                     return(
-                                        <TaskComponent key ={index} Task={tasks}></TaskComponent>
+                                        <TaskComponent key ={index} Task={tasks} complete={completeTask} remove={deleteTask}></TaskComponent>
                                     )
                                 })}
 
@@ -74,9 +97,9 @@ const TaskListComponent = () => {
                     </div>  
 
                 </div>
-                <TaskForm></TaskForm>
+                
             </div>
-            {/*TODO Aplicar un for/map para rendereizar una lista */}
+            <TaskForm add={addTask}></TaskForm>
             
         </div>
     );

@@ -28,7 +28,7 @@ function App() {
         {/*<GreetingF name = "Iham"></GreetingF> */}
 
         {/* Componente de listado de tarea */}
-        {/* <TaskListComponent></TaskListComponent> */}
+         <TaskListComponent></TaskListComponent> 
          
         {/* <ComponenteA></ComponenteA> */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -43,7 +43,8 @@ function App() {
         </Ejemplo4> */}
 
         {/* Gestión de eventos */}
-        <Father></Father>
+        {/*  <Father></Father> */}
+        
         
           
         
