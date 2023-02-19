@@ -1,16 +1,17 @@
-*{
-    color: black;
-}
+
 
 
 .task-action{
     cursor: pointer;
 }
 
-label{
-    color: whitesmoke;
+
+.task-completed{
+    color: gray;
+    text-decoration: line-through;
 }
 
-div .letter-black{
-    color: black;
+.task-pending{
+    font-weight: bold;
+    color: red;
 }

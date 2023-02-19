@@ -11,13 +11,16 @@ import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Clock from './components/Ejercicios/Clock';
 import Father from './components/container/father';
+import OptionalRender from './components/pure/optionalRender';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="">
+      <header className="">
         
         
         {/*Componente propio Greeting.jsx -> Asi se comenta en React*/}
@@ -28,7 +31,8 @@ function App() {
         {/*<GreetingF name = "Iham"></GreetingF> */}
 
         {/* Componente de listado de tarea */}
-         <TaskListComponent></TaskListComponent> 
+        
+         
          
         {/* <ComponenteA></ComponenteA> */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -46,7 +50,12 @@ function App() {
         {/*  <Father></Father> */}
         
         
-          
+      {/* Ejemplos de renderizado condicional */}
+
+
+      {/*Ejemplo de usos de Formik y yup */}
+      <RegisterFormik></RegisterFormik>
+      
         
 
         
